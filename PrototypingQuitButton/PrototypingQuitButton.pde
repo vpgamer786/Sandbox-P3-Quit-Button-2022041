@@ -1,6 +1,7 @@
 //Global Variable
 int appWidth, appHeight;
 float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
+color yellow=#FFFF00, purple=#FF00FF, resetWhite=#FFFFFF, buttonColour; //Notice Nightmode BLUE Values
 //
 void setup() 
 {
@@ -27,10 +28,15 @@ void draw()
 {
   //DisplayOrientation Finishing Code
   //
-  buttonColour = purple;
+  if ( mouseX>quitButtonX && mouseX<quitButtonX+quitButtonWidth && mouseY>quitButtonY && mouseY<quitButtonY+quitButtonHeight ) { //End Hover Over Effect
+    buttonColour = yellow;
+  } else {
+    buttonColour = purple;
+  }//End Hover Over Effect
+  //
   fill(buttonColour);
   rect( quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight );
-  fill(resetWhite); //Not night mode compatible, must change 
+  fill(resetWhite); //Not night mode compatible, must change
 }//End draw
 //
 void keyPressed() 
