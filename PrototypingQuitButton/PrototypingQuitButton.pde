@@ -1,6 +1,23 @@
 //Global Variable
+int appWidth, appHeight;
+float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
 //
-void setup() {
+void setup() 
+{
+  size( 400, 800 ); //fullScreen(), displayWidth, displayHeight
+  //Landscape, not portrait nor square
+  String landscape = "You are good to go!";
+  String portrait = "Bruh, turn your phun!";
+  String displayOritentaion = ( width >= height ) ? landscape : portrait ;
+  println ( displayOritentaion );
+  if ( displayOritentaion==landscape ) appWidth = width; //option displayWidth
+  if ( displayOritentaion==landscape ) appHeight = height; //option displayHeight
+  println (appWidth, appHeight);
+  //Population
+  //quitButtonX = ; 
+  //quitButtonY = ; 
+  //quitButtonWidth = ; 
+  //quitButtonHeight = ;
 }//End setup
 //
 void draw() 
