@@ -9,8 +9,6 @@ void quitButtonPopulation(int centerX, int centerY) { //ignore Parameter Concept
 }//End quitButton
 //
 void quitButtonDraw() {
-  //DisplayOrientation Finishing Code
-  //
   if ( mouseX>quitButtonX && mouseX<quitButtonX+quitButtonWidth && mouseY>quitButtonY && mouseY<quitButtonY+quitButtonHeight ) { //End Hover Over Effect
     buttonColour = red;
   } else {
@@ -18,7 +16,7 @@ void quitButtonDraw() {
   }//End Hover Over Effect
   //
   //Alternate verification that mouse X&Y is on the button
-  println("X-value", quitButtonX, mouseX, quitButtonX+quitButtonWidth, "\t\t look at the middle value");
+  //println("X-value", quitButtonX, mouseX, quitButtonX+quitButtonWidth, "\t\t look at the middle value");
   println("Y-value", quitButtonX, mouseY, quitButtonY+quitButtonHeight, "\t\t look at the middle value");
   fill(buttonColour);
   rect( quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight );
