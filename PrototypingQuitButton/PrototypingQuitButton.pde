@@ -1,27 +1,13 @@
 //Global Variable
-int appWidth, appHeight;
 float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
 color red=#FF0000, green=#00ff00, resetWhite=#FFFFFF, buttonColour; //Notice Nightmode BLUE Values
 //
 void setup() 
 {
   size( 400, 300 ); //fullScreen(), displayWidth, displayHeight
-  //Landscape, not portrait nor square
-  String landscape = "You are good to go!";
-  String portrait = "Bruh, turn your phun!";
-  String displayOritentaion = ( width >= height ) ? landscape : portrait ;
-  if ( displayOritentaion==portrait ) println ( displayOritentaion );
-  if ( displayOritentaion==landscape ) appWidth = width; //option displayWidth
-  if ( displayOritentaion==landscape ) appHeight = height; //option displayHeight
-  //println (appWidth, appHeight);
+  display();
+  population();
   //
-  //Population
-  int centerX = appWidth*1/2;
-  int centerY = appHeight*1/2;
-  quitButtonX = centerX - appWidth*1/4; 
-  quitButtonY = centerY - appHeight*1/4; 
-  quitButtonWidth = appWidth*1/2; 
-  quitButtonHeight = appHeight*1/2;
 }//End setup
 //
 void draw() 
